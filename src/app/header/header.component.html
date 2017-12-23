@@ -1,0 +1,13 @@
+<div class="btn-group" dropdown>
+  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+    Temperaturi<span class="caret"></span>
+  </button>
+  <ul *dropdownMenu class="dropdown-menu" role="menu">
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['istoric']">Istoric</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['temperaturi']">Camera 1</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['setari']">Setari senzori</a></li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['retea']">Setari retea</a>
+    </li>
+  </ul>
+</div>

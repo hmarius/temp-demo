@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -15,5 +15,7 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+ "include": ["./src","./node_modules/wijmo/*.ts"],
+ "exclude": ["node_modules/wijmo/*vue2*.ts","node_modules/wijmo/*react*.ts"]
 }

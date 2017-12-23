@@ -1,0 +1,57 @@
+<div class="header visible-xs visible-sm">
+  <div class="container">
+    <h1>
+      Istoric temperaturi
+    </h1>
+  </div>
+</div>
+
+<!--export interface IstoricRow {-->
+<!--id: number,-->
+<!--numeCamera: string,-->
+<!--dataInregistrare: DateTime,-->
+<!--vBat: number,-->
+<!--vTempOne: number,-->
+<!--vTempTwo: number-->
+
+<div class="row">
+  <div class="col-sm-8">
+    <wj-flex-grid [itemsSource]="data">
+      <wj-flex-grid-column
+        header="Id"
+        binding="id">
+      </wj-flex-grid-column>
+      <wj-flex-grid-column
+        header="Camera"
+        binding="numeCamera">
+      </wj-flex-grid-column>
+      <wj-flex-grid-column
+        header="Data"
+        binding="dataInregistrare">
+      </wj-flex-grid-column>
+      <wj-flex-grid-column
+        header="Baterie"
+        binding="vBat">
+      </wj-flex-grid-column>
+      <wj-flex-grid-column
+        header="T1"
+        binding="vTempOne">
+      </wj-flex-grid-column>
+      <wj-flex-grid-column
+        header="T2"
+        binding="vTempTwo">
+      </wj-flex-grid-column>
+
+    </wj-flex-grid>
+  </div>
+  <div class="col-sm-4">
+    <button class="btn btn-primary" (click)="updateRandom()">Update room</button>
+    <button class="btn btn-dark" (click)="startRandom()">Start auto update</button>
+    <button class="btn btn-danger" (click)="stopRandom()">End auto autoupdate</button>
+
+
+    <app-led-status [updateCounter]="updateCount"></app-led-status>
+  </div>
+</div>
+
+

@@ -40,3 +40,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+__tsconfig.json
+wijmo-5.20173.380.tgz
+src/wijmo.css
