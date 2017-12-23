@@ -42,6 +42,7 @@ export class IstoricComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.startRandom();
   }
 
 

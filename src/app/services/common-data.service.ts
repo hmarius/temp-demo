@@ -44,12 +44,18 @@ export class CommonDataService {
   }
 
   updateRandom() {
+    function zeroPad(num, places) {
+      var zero = places - num.toString().length + 1;
+      return Array(+(zero > 0 && zero)).join("0") + num;
+    }
+
     let newRows = [];
     for (let i = 1; i <= 10; i++) {
+      let id=Math.floor(Math.random() * 20);
       newRows.push(<IstoricRow>{
-        id: Math.floor(Math.random() * 20),
+        id: id,
         dataInregistrare: DateTime.newDate(),
-        numeCamera: 'updated',
+        numeCamera: `camera ${zeroPad(id + 1,2)}`,
         vTempOne: Math.random() * 100.0,
         vTempTwo: Math.random() * 50,
         vBat: Math.random() * 100

@@ -15,36 +15,51 @@
 <!--vTempTwo: number-->
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-10">
     <wj-flex-grid [itemsSource]="data">
       <wj-flex-grid-column
+        [visible]="false"
         header="Id"
-        binding="id">
+        binding="id"
+        autoSizeMode="2"
+      >
       </wj-flex-grid-column>
+
       <wj-flex-grid-column
         header="Camera"
         binding="numeCamera">
       </wj-flex-grid-column>
-      <wj-flex-grid-column
-        header="Data"
-        binding="dataInregistrare">
-      </wj-flex-grid-column>
+
+
       <wj-flex-grid-column
         header="Baterie"
-        binding="vBat">
+        binding="vBat"
+        [format]="'n0'"
+      >
       </wj-flex-grid-column>
       <wj-flex-grid-column
         header="T1"
-        binding="vTempOne">
+        binding="vTempOne"
+        [format]="'n1'"
+      >
+
       </wj-flex-grid-column>
       <wj-flex-grid-column
         header="T2"
-        binding="vTempTwo">
+        binding="vTempTwo"
+        [format]="'n1'"
+      >
       </wj-flex-grid-column>
+        <wj-flex-grid-column
+          header="Data"
+          binding="dataInregistrare">
+        </wj-flex-grid-column>
+
+
 
     </wj-flex-grid>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-2">
     <button class="btn btn-primary" (click)="updateRandom()">Update room</button>
     <button class="btn btn-dark" (click)="startRandom()">Start auto update</button>
     <button class="btn btn-danger" (click)="stopRandom()">End auto autoupdate</button>
